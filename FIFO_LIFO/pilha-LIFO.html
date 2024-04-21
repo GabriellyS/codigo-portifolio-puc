@@ -1,0 +1,57 @@
+<!--
+    FIFO - Fist in First out - O primeiro a entrar é o primeiro a sair
+    LIFO - Last in First out - O Ultimo a entrar é o primeiro a sair
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //LIFO - Stack
+
+        console.log('Pulha/Stack')
+
+        class BrowserHistoryStack {
+            constructor(){
+                this.cursor = 0
+                this.data = []
+            }
+
+            push(item){
+                this.cursor += 1
+                this.data.push(item)
+            }
+
+            pop(){
+                this.cursor -= 1
+                this.data.pop()
+            }
+            clear(){
+                this.data = []
+            }
+            print(){
+                console.log('Cursor',this.cursor)
+                console.log('Itens atuais',this.data)
+            }
+        }
+
+        const history = new BrowserHistoryStack()
+        history.push('htpps://google.com')
+        history.push('htpps://youtube.com')
+        history.push('htpps://facebook.com')
+
+        history.print()
+        //pop é o back do navegador, ou seja, sai o ultimo (LIFO)
+        history.pop()
+        history.print()
+        history.clear()
+        history.print()
+
+    </script>
+</body>
+</html>

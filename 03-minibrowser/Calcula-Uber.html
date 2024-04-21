@@ -1,0 +1,48 @@
+<input type="number" id="distancia" placeholder= "Distancia em KM: ">
+<input type="number" id="tempo" placeholder= "Tempo em minutos: ">
+<button onclick="calculaCorrida()">Calcula</button>
+
+<script>
+
+    //formatar moeda
+    function formataMoeda(corrida)
+        {
+            //to fixed é para deixar 2 casas e o replace pra trocar por ,
+            return corrida.toFixed(2).replace('.',',');
+        }
+    
+
+    //Oraganizar entradas e aplicar a regra de negocio
+    //Variaveis
+    function calculaCorrida () {
+        var tarifaDinamica = 1.4;
+
+        //Minha tentativa
+        if(tempo.value != 0 && tempo.value >0) {
+            if(distancia.value != 0 && distancia.value >0) {
+                var tempoMinutos = tempo.value * 0.26;
+                var distanciaKM = distancia.value * tarifaDinamica;
+                var valorCorrida = distanciaKM + tempoMinutos;
+                
+                //estou mandando o valor da corrida para a funcao
+                alert("O valor da corrida foi de: " + formataMoeda(valorCorrida));
+            }else{
+                alert("Digite a distancia de forma correta");
+            }
+        }else{
+            alert("Digite o tempo de forma correta")
+        }
+    }
+    
+    
+    
+    /*
+    - Preço base
+    - Custo fixo
+    - Horario
+    - KM
+    - Tempo
+    */
+
+
+</script>

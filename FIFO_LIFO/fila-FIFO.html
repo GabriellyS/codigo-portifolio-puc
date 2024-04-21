@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fila</title>
+</head>
+
+<body>
+    <script>
+        console.log('Fila Queue')
+
+        var fila = []
+
+        //-----------------
+        //Receita para criar fila
+        //-----------------
+        // - enqueue > Entra
+        // - dequeue > Sai
+
+        class Queue{ //receita para criar objeto
+            constructor() {
+                this.data = []
+            }
+            print() {
+                console.log(this.data)
+            }
+            enqueue(item){
+                //push adiciona um no ultimo
+                this.data.push(item)
+            }
+            dequeue() {
+                //shift tira o primeiro
+                this.data.shift()
+            }
+            
+        }
+
+        var request = new Queue()
+        //Open Closed
+        //Open: aberto para extensao
+        //Fechado: para modificaçao
+
+        request.enqueue('scripts.js')
+        request.dequeue('scripts.js')
+        request.enqueue('style.css')
+        request.enqueue('ímage.png')
+        request.enqueue('doguinho.png')
+        request.print()
+
+    </script>
+</body>
+
+</html>

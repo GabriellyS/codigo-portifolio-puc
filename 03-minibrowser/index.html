@@ -1,0 +1,57 @@
+<!-- <main>
+    <header>
+        <div class="close-area"></div>
+        <input placeholder="https://..." value="https://mariosouto.com" />
+    </header>
+    <iframe src="https://mariosouto.com"></iframe>
+</main> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Browser</title>
+</head>
+
+<body>
+
+    <script>
+
+        //objetos - 1 coisa com multiplos atributos
+        var aba1 = {
+            titulo: 'Buscar Celular',
+            url: 'https://www.google.com/android/find/u/1/?did=_fm2emF_F8yaeglSSNOsVH7TrdnMLyEFmikE76wlLms%3D&pli=1'
+        }
+
+        var aba2 = {
+            titulo: 'PUC Online',
+            url: 'https://salavirtual.pucrs.br/curso/desenvolvimento-full-stack-32/estrutura'
+        }
+
+        //[ENTRADA]
+        //Arrays - listas de coisas
+        const abas = [
+            aba1, aba2
+        ]
+
+        //[PROCESSAMENTO]
+        for (aba of abas) {
+            console.log(aba.titulo)
+
+            //[OUTPUT]
+            var valorAtual = document.body.innerHTML
+            var info = `<li><a href="${aba.url}">${aba.titulo}</a></li>`
+            document.body.innerHTML += info
+        }
+
+
+    </script>
+
+    <!-- <link rel="stylesheet" href="./style.css" /> -->
+
+
+</body>
+
+</html>
