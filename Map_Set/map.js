@@ -2,11 +2,8 @@
 
 var novoMap = new Map()
 
-class HistoryMap {
-
-}
-
 //Acessou o site dia 11 do mes 11 de 2011 as 11 da noite
+//Ao inves de usar add aqui usa .set
 novoMap.set('11/11/11 - 23:30', {title: 'Titulo 1', url: 'URL 1'})
 novoMap.set('11/11/11 - 23:30', {})
 novoMap.set('11/11/11 - 23:30', {})
