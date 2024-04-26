@@ -5,6 +5,7 @@ class Nodo {
         //ele sempre contem um objeto e a info do proximo
         this.element = element
         this.next = null
+        
     }
 }
 
