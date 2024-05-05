@@ -23,7 +23,7 @@ console.log("Meu nome é " + pessoa2.nome + " e minha idade é " + pessoa2.calcu
 //extends para puxar a classe pai
 //super para usar a funcao do pai
 class Estudante extends Pessoa{
-    constructor (nome, anoNascimento,profissao,matricula){
+    constructor (nome, anoNascimento,matricula){
         //sobrescrevendo a profissao semmpre como estudante
         super(nome,anoNascimento,"Estudante")
         this.matricula = matricula
