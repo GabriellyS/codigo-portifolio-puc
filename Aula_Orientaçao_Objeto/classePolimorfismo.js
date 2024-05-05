@@ -21,9 +21,25 @@ class Estudante extends Pessoa{
         this.matricula = matricula
     }
     ola(){
-        console.log("Olá colégas")
+        super.ola()
+        console.log("colegas")
+    }
+}
+const pessoa1 = new Pessoa("Gabrielly",1997,"Analista")
+const aluno1 = new Estudante("Kalleo",1998,"KA2024")
+//console.log(aluno1.ola())
+
+//Adicionando um atributo a todos os objetos da classe
+Estudante.prototype.formacao = "Estagiário"
+console.log(aluno1.formacao)
+
+class ValidadorCPF {
+    static validar(cpf,tamanho){
+        if (tamanho == 11) {
+            console.log("CPF válido")
+        }
+        return console.log("CPF inválido")
     }
 }
 
-const aluno1 = new Estudante("Kalleo",1998,"KA2024")
-console.log(aluno1)
+console.log(ValidadorCPF.validar("09386855976",10))
