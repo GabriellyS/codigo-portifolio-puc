@@ -16,3 +16,14 @@ console.log(pessoa1.nome + " tem " + pessoa1.calculaIdade() + " anos e esta na p
 
 const pessoa2 = new Pessoa("Maria", 1968, "Geóloga")
 console.log(pessoa2.nome + " tem " + pessoa2.calculaIdade()+ " anos e esta na profissão de " + pessoa2.profissao)
+
+//Instruindo para criar um novo objeto conforme o objeto anterior foi criado
+const pessoa3 = Object.create(pessoa2)
+console.log(pessoa3.nome + " tem " + pessoa3.calculaIdade()+ " anos e esta na profissão de " + pessoa3.profissao)
+
+//Usando uma Herança Prototipada
+Pessoa.prototype.saudar = function(){
+    console.log("Olá")
+}
+console.log(pessoa1.saudar())
+console.log(pessoa2.saudar())
