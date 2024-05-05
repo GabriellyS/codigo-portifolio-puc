@@ -24,10 +24,13 @@ console.log("Meu nome é " + pessoa2.nome + " e minha idade é " + pessoa2.calcu
 //super para usar a funcao do pai
 class Estudante extends Pessoa{
     constructor (nome, anoNascimento,profissao,matricula){
-        super(nome,anoNascimento,profissao)
+        //sobrescrevendo a profissao semmpre como estudante
+        super(nome,anoNascimento,"Estudante")
         this.matricula = matricula
     }
 }
 
-const aluno = new Estudante("Kalleo",1998,"Programador","KA2024")
+const aluno = new Estudante("Kalleo",1998,"KA2024")
 console.log("Meu nome é " + aluno.nome + " e minha matricula é " + aluno.matricula + " eu tenho " + aluno.calculaIdade() + " anos")
+//usando uma funcao do pai
+console.log(aluno.ola())
