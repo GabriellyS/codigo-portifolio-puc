@@ -27,3 +27,12 @@ Pessoa.prototype.saudar = function(){
 }
 console.log(pessoa1.saudar())
 console.log(pessoa2.saudar())
+
+//Criando uma funçao com Arrow Functions
+//Abre uma funcao sem parametros e com o => significa "quando fo chamada"
+var somar1 = () => console.log("\nChamando a Funcao sem paramentos\n")
+somar1()
+
+//usando o mesmo metodo mas retornando uma soma
+var somar2 = (x,y) => {return ("\n" + (x + y) + "\n" )}
+console.log(somar2(2,5))
