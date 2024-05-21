@@ -1,8 +1,8 @@
-const SequenceControler = require('../controllers/sequenceControler')
+const SequenceController = require('../controllers/SequenceController')
   module.exports = (server) => {
-     server.post('/sequence', SequenceControler.post);
-     server.put('/sequence', SequenceControler.put);
-     server.delete('/sequence', SequenceControler.delete);
-     server.get('/sequence', SequenceControler.get);
-     server.get('/sequence/:id', SequenceControler.getById);
+     server.post('/sequence', SequenceController.post);
+     server.put('/sequence', SequenceController.put);
+     server.delete('/sequence', SequenceController.delete);
+     server.get('/sequence', SequenceController.get);
+     server.get('/sequence/:id', SequenceController.getById);
   }
