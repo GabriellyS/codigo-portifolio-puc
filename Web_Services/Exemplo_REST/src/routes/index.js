@@ -1,4 +1,4 @@
-const SequenceRoute = require('./sequenceRoute')
+const SequenceRoute = require('./sequenceRoute.js')
     module.exports = (server) => {
         SequenceRoute(server)
     }
